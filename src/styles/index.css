@@ -12,7 +12,7 @@ main div {
 
     --gradient: rgba(0, 0, 0, 0);
 
-    font-size: 5rem;
+    font-size: 3.5vw;
     color: rgb(190, 187, 187);
     text-shadow: -10px 10px 30px rgba(0,0,0,0.2);
     position: relative !important;
@@ -69,9 +69,9 @@ main div:nth-child(1) {
 main div:nth-child(2) {
 
     align-self: flex-end;
-    font-size: 8rem;
-    margin-right: 2rem;
-    margin-top: -2rem;
+    font-size: 6vw;
+    margin-right: 2vw;
+    margin-top: -2vh;
 }
 
 main div:nth-child(3) {
