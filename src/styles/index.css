@@ -1,0 +1,104 @@
+main {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 40vw;
+    height: 70vh;
+}
+
+main div {
+
+    --gradient: rgba(0, 0, 0, 0);
+
+    font-size: 5rem;
+    color: rgb(190, 187, 187);
+    text-shadow: -10px 10px 30px rgba(0,0,0,0.2);
+    position: relative !important;
+    pointer-events: auto !important;
+    cursor: pointer;
+
+    background-image: linear-gradient(var(--gradient) 0%, var(--gradient) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: 0.5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    padding-right: 1px;
+    width: fit-content;
+}
+
+main div:hover {
+
+    background-size: 100% 100%;
+}
+
+main div:nth-child(1):hover { color: #8bc4eb }
+main div:nth-child(2):hover { color: #63e96e }
+main div:nth-child(3):hover { color: #ad76ec }
+main div:nth-child(4):hover { color: #e04b4b }
+
+main div:after {
+
+    content: "";
+
+    opacity: 0;
+    transition: all 1s linear;
+	display: block;
+	width: 100%;
+	height: 2px;
+	position: relative;
+	top: 10px;
+    color: #e0e0e0;
+    font-size: 2rem;
+}
+
+main div:hover:after { opacity: 1; }
+
+main div:nth-child(1):hover:after { content: "About"; }
+main div:nth-child(2):hover:after { content: "Anilist"; text-align: end;}
+main div:nth-child(3):hover:after { content: "My projects"; }
+main div:nth-child(4):hover:after { content: "Contact"; }
+
+main div:nth-child(1) {
+
+    z-index: 1;
+    margin-top: 2.5rem;
+}
+
+main div:nth-child(2) {
+
+    align-self: flex-end;
+    font-size: 8rem;
+    margin-right: 2rem;
+    margin-top: -2rem;
+}
+
+main div:nth-child(3) {
+
+    z-index: 1;
+    align-self: flex-end;
+    margin-right: 8rem;
+}
+
+main div:nth-child(4) {
+
+    margin-top: 10rem;
+    margin-bottom: -1rem;
+}
+
+main > section {
+
+    position: absolute;
+    display: flex !important;
+    justify-content: center;
+    width: 40vw;
+}
+
+img {
+
+    position: relative !important;
+    height: 65vh;
+    box-shadow: -10px 0px 30px 5px rgba(0,0,0,0.2);
+
+}
