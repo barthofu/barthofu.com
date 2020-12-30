@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+@font-face { font-family: "Poppins"; src: url("../assets/Poppins-Bold.ttf") format("truetype"); }
+@font-face { font-family: "PoppinsExtraLight"; src: url("../assets/Poppins-ExtraLight.ttf") format("truetype"); }
 
 :root {
 

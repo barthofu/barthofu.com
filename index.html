@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/index.css">
 
+    <link rel="stylesheet" href="src/styles/containers/about.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js" integrity="sha512-jeYvJdyAYkpQCY/omvCYQo89qA5YxDW4JBT7COPsHT2sOAanwxkZRFeP9gc69b5reSDpZIoyCqZQZcWZkbB5Gw==" crossorigin="anonymous"></script>
     <script src="src/scripts/main.js"></script>
 
 </head>
-<body>
+<body onload="generateQuote()">
     
 
     <header id="scene">
@@ -31,14 +33,16 @@
     </header>
     
 
-    <section class="about container">
+    <section class="about container showed">
         <ul>
             <li class="red"></li>
             <li class="yellow"></li>
             <li class="green"></li>
         </ul>
         <div class="about wrapper">
-
+            <div class="quote"></div>
+            <div class="about separator"></div>
+            <img src="src/assets/about.png" alt="">
         </div>
     </section>
 
