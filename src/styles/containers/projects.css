@@ -1,0 +1,10 @@
+.projects.wrapper {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+
+    font-size: 4rem;
+    color: var(--white);
+}
