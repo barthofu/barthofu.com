@@ -19,6 +19,8 @@ const buttonsCorrespondences = [
     ".contact.container"
 ];
 
+let keys = [];
+
 function generateQuote() {
     let rand = Math.floor(Math.random()*randomQuotes.length);
     $('.quote').html(`
@@ -31,6 +33,24 @@ $(document).ready(function() {
 
     let sceneParallax = document.getElementById(`scene`);
     new Parallax(sceneParallax);
+
+    document.addEventListener('keydown', function(event) {
+
+        const key = event.key.toLowerCase();
+
+        if (key === 'a') {
+            keys = []
+        }
+
+        keys.push(key);
+
+        if (keys[0] === 'a' && keys[1] === 'n' && keys[2] === 'i') {
+            $(".anilist.container").addClass("showed");
+        }
+
+        console.log(keys)
+
+    });
 
     $('header > div').click(function (e) {
 
