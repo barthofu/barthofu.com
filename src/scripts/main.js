@@ -14,7 +14,7 @@ let randomQuotes = (function() {
 
 const buttonsCorrespondences = [
     ".about.container",
-    ".anilist.container",
+    "https://github.com/barthofu",
     ".projects.container",
     ".contact.container"
 ];
@@ -34,8 +34,14 @@ $(document).ready(function() {
 
     $('header > div').click(function (e) {
 
-        if ($(this).index() === 0) generateQuote();
-        $(buttonsCorrespondences[$(this).index()]).addClass("showed");
+        let className = buttonsCorrespondences[$(this).index()]
+
+        if (className.startsWith("https")) document.location.href = className;
+        else {
+            if ($(this).index() === 0) generateQuote();
+            $(className).addClass("showed");
+        }
+
     });
 
     $('.red, .yellow').click(function (e) {

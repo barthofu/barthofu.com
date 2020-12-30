@@ -55,8 +55,10 @@ header div:after {
 
 header div:hover:after { opacity: 1; }
 
-header div:nth-child(1):hover:after { content: "About"; }
-header div:nth-child(2):hover:after { content: "Anilist"; text-align: end;}
+header div:nth-child(2):after { margin-top: -1rem; }
+
+header div:nth-child(1):hover:after { content: "About";}
+header div:nth-child(2):hover:after { content: "Github"; text-align: end;}
 header div:nth-child(3):hover:after { content: "My projects"; }
 header div:nth-child(4):hover:after { content: "Contact"; }
 
