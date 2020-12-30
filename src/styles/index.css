@@ -1,4 +1,4 @@
-main {
+header {
 
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@ main {
     height: 70vh;
 }
 
-main div {
+header div {
 
     --gradient: rgba(0, 0, 0, 0);
 
@@ -28,17 +28,17 @@ main div {
     width: fit-content;
 }
 
-main div:hover {
+header div:hover {
 
     background-size: 100% 100%;
 }
 
-main div:nth-child(1):hover { color: #8bc4eb }
-main div:nth-child(2):hover { color: #63e96e }
-main div:nth-child(3):hover { color: #ad76ec }
-main div:nth-child(4):hover { color: #e04b4b }
+header div:nth-child(1):hover { color: #8bc4eb }
+header div:nth-child(2):hover { color: #63e96e }
+header div:nth-child(3):hover { color: #ad76ec }
+header div:nth-child(4):hover { color: #e04b4b }
 
-main div:after {
+header div:after {
 
     content: "";
 
@@ -53,20 +53,20 @@ main div:after {
     font-size: 2rem;
 }
 
-main div:hover:after { opacity: 1; }
+header div:hover:after { opacity: 1; }
 
-main div:nth-child(1):hover:after { content: "About"; }
-main div:nth-child(2):hover:after { content: "Anilist"; text-align: end;}
-main div:nth-child(3):hover:after { content: "My projects"; }
-main div:nth-child(4):hover:after { content: "Contact"; }
+header div:nth-child(1):hover:after { content: "About"; }
+header div:nth-child(2):hover:after { content: "Anilist"; text-align: end;}
+header div:nth-child(3):hover:after { content: "My projects"; }
+header div:nth-child(4):hover:after { content: "Contact"; }
 
-main div:nth-child(1) {
+header div:nth-child(1) {
 
     z-index: 1;
     margin-top: 2.5rem;
 }
 
-main div:nth-child(2) {
+header div:nth-child(2) {
 
     align-self: flex-end;
     font-size: 6vw;
@@ -74,20 +74,20 @@ main div:nth-child(2) {
     margin-top: -2vh;
 }
 
-main div:nth-child(3) {
+header div:nth-child(3) {
 
     z-index: 1;
     align-self: flex-end;
     margin-right: 8rem;
 }
 
-main div:nth-child(4) {
+header div:nth-child(4) {
 
     margin-top: 10rem;
     margin-bottom: -1rem;
 }
 
-main > section {
+header > section {
 
     position: absolute;
     display: flex !important;
