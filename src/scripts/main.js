@@ -65,7 +65,7 @@ function generateWaifuTop() {
                             <span class="name">${e.name}</span>
                         </a>
                     </li>
-                `})
+                `}).join("")
             }
         </ul>
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@ function generateWaifuTop() {
                     <span class="name">${e.name}</span>
                 </a>
             </li>
-        `})
+        `}).join("")
     }
     </ul>
     `);
