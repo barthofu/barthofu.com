@@ -1,0 +1,265 @@
+.waifu.wrapper {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+
+}
+
+.waifu.wrapper .separator {
+
+    height: 30vh;
+    width: 7px;
+    background: rgb(37, 37, 36);
+    border-radius: 50px;
+    margin: 0 -10vw;
+}
+
+.podium-wrapper {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    mrgin-top: 2vh;
+}
+
+.podium {
+
+    display: flex;
+
+}
+
+.podium a {
+
+    margin-bottom: -8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.podium li:nth-child(1) .cover {  margin-top: 5vh; }
+.podium li:nth-child(3) .cover {  margin-top: 10vh; }
+
+.podium .left {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.podium .cover {
+
+    width: 10vw;
+    height: 16vw;
+    border-radius: 5px;
+    margin: 0 0.5vw;
+
+    /* mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); */
+
+    opacity: 0.7;
+    z-index: -1;
+
+    animation: floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating {
+
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translateY(0);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+        transform: translateY(1.5vh);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translateY(0);
+    }
+
+}
+
+.podium-wrapper svg {
+
+    width: 30vw;
+    margin-top: 3vh;
+    margin-right: 2vw;
+    fill: #2c2929;
+}
+
+.podium .index {
+
+    display: none;
+
+    font-size: clamp(1rem, 3vw, 3rem);
+    padding: 2rem;
+    margin-top: -3vh;
+
+    /* background: var(--background); */
+    color: gold;
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+    opacity: 0.7;
+    border-radius: 50px;
+    
+    
+}
+
+.podium .name {
+
+    display: none;
+
+    font-size: 1.3rem;
+    color: var(--white);
+}
+
+
+
+
+
+.top {
+
+    overflow-y: scroll;
+    height: 70vh;
+    max-width: 27vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.top a {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.top .left {
+
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.top .cover {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+
+    opacity: 0.4;
+
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.top .index {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+    opacity: 0.7;
+
+    transition: opacity 0.3s ease-in-out;
+}
+
+.top .name {
+
+    color: var(--white);
+    font-size: 1.8vw;
+    width: 15vw;
+    padding: 0 2rem;
+}
+
+
+
+.top a {
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.top a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #232325;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+
+}
+.top a:hover, .top a:focus, .top a:active {
+    color: white;
+}
+.top a:hover:before, .top a:focus:before, .top a:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.top a:hover .cover {
+    opacity: 0.9;
+}
+
+.top a:hover .index {
+    opacity: 0;
+}
+
+
+
+
+.top::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: var(--background);
+}
+
+.top::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: var(--background);
+}
+
+.top::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #555;
+}
