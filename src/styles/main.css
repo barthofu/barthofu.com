@@ -10,7 +10,7 @@
 
 .container {
 
-    transform: translateY(100vh);
+    transform: translateY(200vh);
     width: 80vw;
     height: 80vh;
     background: var(--background);

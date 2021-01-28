@@ -1,0 +1,62 @@
+.contact.wrapper {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 90%;
+
+}
+
+.contact.wrapper h2 {
+
+    color: var(--white);
+    margin-bottom: 10vh;
+}
+
+.contact.separator {
+
+    width: 10%;
+    height: 10px;
+    background: #252524;
+    border-radius: 100px;
+    margin-bottom: 10vh;
+
+}
+
+.contact.wrapper ul {
+
+    display: flex;
+
+}
+
+
+.contact.wrapper li {
+
+    margin: 0 2vw;
+}
+
+.contact.wrapper li a {
+
+
+}
+
+.contact.wrapper li svg {
+
+    width: 80px;
+    fill: var(--white);
+    transition: 0.3s ease-in-out;
+
+}
+
+.contact.wrapper li svg:hover {
+
+    transform: scale(1.04)
+}
+
+.contact.discord svg:hover { fill: #8A9CFE; }
+.contact.instagram svg:hover { fill: #D54D5E; }
+.contact.twitter svg:hover { fill: #50ABF1; }
+.contact.mail svg:hover { fill: white; }
