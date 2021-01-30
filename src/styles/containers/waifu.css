@@ -1,3 +1,7 @@
+
+
+
+
 .waifu.wrapper {
 
     display: flex;
@@ -55,8 +59,8 @@
 
 .podium .cover {
 
-    width: 10vw;
-    height: 16vw;
+    width: clamp(5rem, 10vw, 30rem);
+    height: clamp(8rem, 16vw, 30rem);
     border-radius: 5px;
     margin: 0 0.5vw;
 
@@ -91,7 +95,7 @@
 
 .podium-wrapper svg {
 
-    width: 30vw;
+    width: clamp(15rem, 30vw, 40rem);
     margin-top: 3vh;
     margin-right: 2vw;
     fill: #2c2929;
@@ -188,7 +192,7 @@
 .top .name {
 
     color: var(--white);
-    font-size: 1.8vw;
+    font-size: clamp(1rem, 1.8vw, 4rem);
     width: 15vw;
     padding: 0 2rem;
 }
@@ -262,4 +266,62 @@
 {
 	border-radius: 10px;
 	background-color: #555;
+}
+
+
+
+
+@media (max-width: 425px) {
+
+    .waifu.wrapper {
+
+        flex-direction: column;
+    }
+
+    .waifu.wrapper .separator {
+
+        display: none;
+    }
+
+    .podium li:nth-child(1) .cover {  margin-top: 2.5vh; }
+    .podium li:nth-child(3) .cover {  margin-top: 5vh; }
+
+    .podium-wrapper svg {
+
+        margin-top: 6vh;
+        margin-right: 5vw;
+    }
+
+    .top {
+
+        margin-top: 5vh;
+        max-width: 70vw;
+        height: 45vh;
+    }
+
+    .top .left {
+
+        width: 75px;
+        height: 75px;
+    }
+
+    .top .index {
+
+        font-size: 2rem;
+    }
+
+    .top .name {
+
+        padding: 0;
+        padding-left: 1rem;
+        width: 32vw
+    }
+}
+
+@media (max-width: 400px) {
+
+    .top {
+
+        height: 33vh;
+    }
 }
