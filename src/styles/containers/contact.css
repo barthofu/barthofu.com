@@ -14,6 +14,7 @@
 
     color: var(--white);
     margin-bottom: 10vh;
+    font-size: clamp(1rem, 3vw, 3rem)
 }
 
 .contact.separator {
@@ -35,7 +36,7 @@
 
 .contact.wrapper li {
 
-    margin: 0 2vw;
+    margin: 3vw 2vw;
 }
 
 .contact.wrapper li a {
@@ -60,3 +61,20 @@
 .contact.instagram svg:hover { fill: #D54D5E; }
 .contact.twitter svg:hover { fill: #50ABF1; }
 .contact.mail svg:hover { fill: white; }
+
+
+@media (max-width: 425px) {
+
+    .contact.wrapper li svg {
+
+        width: 50px;
+    }
+
+    .contact.wrapper ul {
+
+        flex-direction: column;
+    }
+
+    
+
+}

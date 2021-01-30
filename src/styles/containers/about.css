@@ -39,3 +39,36 @@
     padding: 3rem;
     height: 75vh;
 }
+
+
+@media (max-width: 425px) {
+
+    .about.wrapper {
+
+        flex-direction: column;
+    }
+
+    .about.wrapper .separator {
+
+        transform: rotate(90deg);
+        margin-top: -20vh;
+        margin-bottom: -22vh;
+    }
+
+    .about.wrapper .quote {
+
+        font-size: 1.5rem;
+        padding: 3rem;
+        padding-top: 1vh;
+    }
+
+    .about.wrapper .quote span {
+
+        font-size: 0.9rem;
+    }
+
+    .about img {
+
+        height: 70vh;
+    }
+}

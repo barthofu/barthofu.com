@@ -118,10 +118,11 @@
 
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
     
         width: 100vw;
         height: 100vh;
+
+        padding: 2rem 2rem;
 
     }
     
@@ -129,77 +130,42 @@
     
         --gradient: rgba(0, 0, 0, 0);
     
-        font-size: clamp(3rem, 3.5vw, 4rem);
+        font-size: clamp(1.8rem, 3.5vw, 4rem);
         color: rgb(190, 187, 187);
         text-shadow: -10px 10px 30px rgba(0,0,0,0.2);
         position: relative !important;
         pointer-events: auto !important;
-        cursor: pointer;
-    
-        background-image: linear-gradient(var(--gradient) 0%, var(--gradient) 100%);
-        background-repeat: no-repeat;
-        background-size: 100% 0;
-        background-position: 0 100%;
-        transition: 0.5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
-        padding-right: 1px;
-        width: fit-content;
+
+        margin-left: 1vw;
     }
-    
-    header div:hover {
-    
-        background-size: 100% 100%;
+
+    header div:nth-child(1) {
+
+        margin-top: 5vh;
     }
-    
-    header div:nth-child(1):hover { color: #8bc4eb }
-    header div:nth-child(2):hover { color: #63e96e }
-    header div:nth-child(3):hover { color: #ad76ec }
-    header div:nth-child(4):hover { color: #e04b4b }
     
     header div:after {
     
         content: "";
     
-        opacity: 0;
         transition: all 1s linear;
-        display: block;
         width: 100%;
         height: 2px;
         position: relative;
-        top: 10px;
-        color: #e0e0e0;
-        font-size: 2rem;
+        color: #919191;
+        font-size: 1rem;
     }
-    
-    header div:hover:after { opacity: 1; }
-    
-    header div:nth-child(2):after { margin-top: -1rem; }
-    
-    header div:nth-child(1):hover:after { content: "About";}
-    header div:nth-child(2):hover:after { content: "Github"; text-align: end;}
-    header div:nth-child(3):hover:after { content: "My projects"; }
-    header div:nth-child(4):hover:after { content: "Contact"; }
-    
-    header div:nth-child(1) {
-    
+        
+    header div:nth-child(1):after { content: " / About";}
+    header div:nth-child(2):after { content: " / Github"; text-align: end;}
+    header div:nth-child(3):after { content: " / My projects"; }
+    header div:nth-child(4):after { content: " / Contact"; }
 
+    header section {
+
+        order: -1;
     }
-    
-    header div:nth-child(2) {
-    
-    }
-    
-    header div:nth-child(3) {
-    
-    }
-    
-    header div:nth-child(4) {
-    
-    }
-    
-    header > section {
-    
-    }
-    
+
     header img {
     
         height: 65vh;

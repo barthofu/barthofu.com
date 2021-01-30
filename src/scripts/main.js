@@ -1,3 +1,5 @@
+const mobile = true;
+
 let randomQuotes = (function() {
     var json = null;
     $.ajax({
@@ -88,13 +90,25 @@ function generateWaifuTop() {
     `);
 }
 
+
+function isParallax(x) {
+
+
+}
+
 $(document).ready(function() {
 
-    let sceneParallax = document.getElementById(`scene`);
-    new Parallax(sceneParallax);
+    if (!window.matchMedia("(max-width: 425px)").matches) {
+
+        let sceneParallax = document.getElementById(`scene`);
+        new Parallax(sceneParallax);
+
+        mobile = false;
+    
+    }
 
     generateWaifuTop();
-    
+
     if (args === 'waifu' || args === '"waifu"' || document.URL.includes("#waifu")) $('.waifu.container').addClass('showed');
 
     document.addEventListener('keydown', function(event) {
@@ -132,6 +146,8 @@ $(document).ready(function() {
     });
 
     $('.green').click(function (e) {
+
+        if (mobile) return
 
         if ($(e.target).parents('section').attr('class').includes("maximized")) {
             $(e.target).parents('section').removeClass("maximized");
