@@ -1,4 +1,4 @@
-const mobile = true;
+let mobile = true;
 
 let randomQuotes = (function() {
     var json = null;
