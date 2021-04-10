@@ -74,7 +74,7 @@
     
         align-self: flex-end;
         font-size: clamp(5rem, 6vw, 6rem);
-        margin-right: 2vw;
+        margin-right: 4vw;
         margin-top: -2vh;
     }
     

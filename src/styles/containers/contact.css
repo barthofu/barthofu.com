@@ -48,13 +48,13 @@
 
     width: 80px;
     fill: var(--white);
-    transition: 0.3s ease-in-out;
+    transition: 0.15s linear;
 
 }
 
-.contact.wrapper li svg:hover {
+.contact.wrapper li:hover svg {
 
-    transform: scale(1.04)
+    transform: scale(1.06)
 }
 
 .contact.discord svg:hover { fill: #8A9CFE; }
