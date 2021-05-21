@@ -4,7 +4,8 @@
 
 :root {
 
-    --white: rgb(161, 161, 161);
+    --grey: rgb(161, 161, 161);
+    --white: rgb(219, 219, 219);
     --background: #19191b;
 }
 

@@ -123,7 +123,7 @@
     display: none;
 
     font-size: 1.3rem;
-    color: var(--white);
+    color: var(--grey);
 }
 
 
@@ -191,7 +191,7 @@
 
 .top .name {
 
-    color: var(--white);
+    color: var(--grey);
     font-size: clamp(1rem, 1.8vw, 4rem);
     width: 15vw;
     padding: 0 2rem;

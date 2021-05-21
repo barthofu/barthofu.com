@@ -1,44 +1,97 @@
+.about {
+
+}
+
 .about.wrapper {
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    padding: 3rem 5rem;
+
     width: 100%;
-}
-
-.about.wrapper .quote {
-
-    display: flex;
-    flex-direction: column;
 
     color: var(--white);
-    font-size: 2rem;
-    padding: 5rem;
+
 }
 
-.about.wrapper .quote span {
+.about.navbar {
 
-    padding: 0.5rem 0;
-    font-size: 1.2rem;
-    font-style: italic;
-    font-family: "PoppinsExtraLight";
-    color: grey;
+    display: flex;
+    margin-bottom: 2.5rem;
+
 }
 
-.about.wrapper .separator {
+.about.navbar li {
 
-    height: 30vh;
-    width: 7px;
-    background: rgb(37, 37, 36);
-    border-radius: 50px;
+    margin-right: 1.5rem;
+
+    font-size: 1.7rem;
+    color: var(--grey);
+    font-family: 'PoppinsExtraLight';
+
+    cursor: pointer;
+    
+}
+
+.about.navbar li.selected {
+
+    color: var(--white);
+    font-family: 'Poppins';
+}
+
+.about.text {
+
+    overflow: scroll;
+    height: 70vh;
+    max-width: 50vw;
+}
+
+.about.text div:not(.selected) {
+    display: none;
 }
 
 
-.about img {
+.about p,
+.about a {
 
-    padding: 3rem;
-    height: 75vh;
+    margin-bottom: 1.5rem;
+
+    font-family: 'PoppinsExtraLight';
+    font-size: 1.3rem;
 }
+
+.about.text ul {
+
+    margin-left: 2rem;
+}
+.about.text li {
+
+    margin-bottom: .3rem;
+
+    font-family: 'PoppinsExtraLight';
+    font-size: 1.3rem;
+
+}
+
+
+.about.text .skills img {
+    height: 40px;
+}
+
+.about::-webkit-scrollbar {
+    display:none;
+}
+
+
+.about .selected {
+    animation: fadeIn 0.5s linear;
+    
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 50%; }
+    100% { opacity: 100%; }
+}
+
 
 
 @media (max-width: 425px) {
@@ -48,27 +101,5 @@
         flex-direction: column;
     }
 
-    .about.wrapper .separator {
 
-        transform: rotate(90deg);
-        margin-top: -20vh;
-        margin-bottom: -22vh;
-    }
-
-    .about.wrapper .quote {
-
-        font-size: 1.5rem;
-        padding: 3rem;
-        padding-top: 1vh;
-    }
-
-    .about.wrapper .quote span {
-
-        font-size: 0.9rem;
-    }
-
-    .about img {
-
-        height: 70vh;
-    }
 }

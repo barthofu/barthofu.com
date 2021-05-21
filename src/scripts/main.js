@@ -1,20 +1,6 @@
 let mobile = true;
 
-let randomQuotes = (function() {
-    var json = null;
-    $.ajax({
-      'async': false,
-      'global': false,
-      'url': "src/data/quotes.json",
-      'dataType': "json",
-      'success': function(data) {
-        json = data;
-      }
-    });
-    return json;
-})()
-
-let waifuTop = (function() {
+const waifuTop = (function() {
     var json = null;
     $.ajax({
       'async': false,
@@ -26,7 +12,7 @@ let waifuTop = (function() {
       }
     });
     return json;
-})().top
+})().top;
 
 const buttonsCorrespondences = [
     ".about.container",
@@ -42,13 +28,76 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const args = urlParams.get('show');
 
-function generateQuote() {
-    let rand = Math.floor(Math.random()*randomQuotes.length);
-    $('.quote').html(`
-    ${randomQuotes[rand].quote}
-    <span>${randomQuotes[rand].author}</span>
-    `);
+
+function changeAboutText(className) {
+
+    $('.about.navbar .selected').removeClass('selected');
+    $('.about.text .selected').removeClass('selected');
+
+    $(`.about.navbar .${className}`).addClass('selected');
+    $(`.about.text .${className}`).addClass('selected');
+
 }
+
+
+$(document).ready(function() {
+
+    if (!window.matchMedia("(max-width: 425px)").matches) {
+
+        let sceneParallax = document.getElementById(`scene`);
+        new Parallax(sceneParallax);
+
+        mobile = false;
+    }
+
+    generateWaifuTop();
+
+    if (args === 'waifu' || args === '"waifu"' || document.URL.includes("#waifu")) $('.waifu.container').addClass('showed');
+
+    document.addEventListener('keydown', function(event) {
+
+        const key = event.key.toLowerCase();
+
+        if (key === 'w') {
+            keys = [];
+        }
+
+        keys.push(key);
+
+        if (keys[0] === 'w' && keys[1] === 'a' && keys[2] === 'i') {
+            $(".waifu.container").addClass("showed");
+        }
+
+    });
+
+    $('header > div').click(function (e) {
+
+        const className = buttonsCorrespondences[$(this).index()];
+
+        if (className.startsWith("https")) document.location.href = className;
+        else $(className).addClass("showed");
+
+    });
+
+    $('.red, .yellow').click(function (e) {
+
+        keys = [];
+        $(e.target).parent().parent().removeClass("showed");
+    });
+
+    $('.green').click(function (e) {
+
+        if (mobile) return
+
+        if ($(e.target).parents('section').attr('class').includes("maximized")) {
+            $(e.target).parents('section').removeClass("maximized");
+        } else {
+            $(e.target).parents('section').addClass("maximized");
+        }
+
+    });
+
+});
 
 function generateWaifuTop() {
 
@@ -103,73 +152,3 @@ function generateWaifuTop() {
     </ul>
     `);
 }
-
-
-function isParallax(x) {
-
-
-}
-
-$(document).ready(function() {
-
-    if (!window.matchMedia("(max-width: 425px)").matches) {
-
-        let sceneParallax = document.getElementById(`scene`);
-        new Parallax(sceneParallax);
-
-        mobile = false;
-    
-    }
-
-    generateWaifuTop();
-
-    if (args === 'waifu' || args === '"waifu"' || document.URL.includes("#waifu")) $('.waifu.container').addClass('showed');
-
-    document.addEventListener('keydown', function(event) {
-
-        const key = event.key.toLowerCase();
-
-        if (key === 'w') {
-            keys = []
-        }
-
-        keys.push(key);
-
-        if (keys[0] === 'w' && keys[1] === 'a' && keys[2] === 'i') {
-            $(".waifu.container").addClass("showed");
-        }
-
-    });
-
-    $('header > div').click(function (e) {
-
-        let className = buttonsCorrespondences[$(this).index()]
-
-        if (className.startsWith("https")) document.location.href = className;
-        else {
-            if ($(this).index() === 0) generateQuote();
-            $(className).addClass("showed");
-        }
-
-    });
-
-    $('.red, .yellow').click(function (e) {
-
-        keys = []
-        $(e.target).parent().parent().removeClass("showed");
-    });
-
-    $('.green').click(function (e) {
-
-        if (mobile) return
-
-        if ($(e.target).parents('section').attr('class').includes("maximized")) {
-            $(e.target).parents('section').removeClass("maximized");
-        } else {
-            $(e.target).parents('section').addClass("maximized");
-        }
-
-    });
-
-});
-
