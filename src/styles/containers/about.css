@@ -1,22 +1,13 @@
-.about {
-
-}
-
 .about.wrapper {
 
     padding: 3rem 5rem;
-
-    width: 100%;
-
     color: var(--white);
-
 }
 
 .about.navbar {
 
     display: flex;
     margin-bottom: 2.5rem;
-
 }
 
 .about.navbar li {
@@ -28,7 +19,6 @@
     font-family: 'PoppinsExtraLight';
 
     cursor: pointer;
-    
 }
 
 .about.navbar li.selected {
@@ -68,7 +58,6 @@
 
     font-family: 'PoppinsExtraLight';
     font-size: 1.3rem;
-
 }
 
 
@@ -83,7 +72,6 @@
 
 .about .selected {
     animation: fadeIn 0.5s linear;
-    
 }
 
 
@@ -91,7 +79,6 @@
     0% { opacity: 50%; }
     100% { opacity: 100%; }
 }
-
 
 
 @media (max-width: 425px) {
