@@ -1,5 +1,19 @@
 let mobile = true;
 
+const projects = (function() {
+    var json = null;
+    $.ajax({
+      'async': false,
+      'global': false,
+      'url': "src/data/projects.json",
+      'dataType': "json",
+      'success': function(data) {
+        json = data;
+      }
+    });
+    return json;
+})();
+
 const waifuTop = (function() {
     var json = null;
     $.ajax({
@@ -29,7 +43,7 @@ const urlParams = new URLSearchParams(queryString);
 const args = urlParams.get('show');
 
 
-function changeAboutText(className) {
+function changeAboutText (className) {
 
     $('.about.navbar .selected').removeClass('selected');
     $('.about.text .selected').removeClass('selected');
@@ -37,6 +51,22 @@ function changeAboutText(className) {
     $(`.about.navbar .${className}`).addClass('selected');
     $(`.about.text .${className}`).addClass('selected');
 
+}
+
+function generateProjects () {
+
+    $('.projects.wrapper').html(`
+        ${
+            projects.map(project => `
+                <a class="project" href="${project.url}" target="_blank" style="background: url(${project.image}) center/130% no-repeat">
+                    <div class="infos">
+                        ${project.name}
+                        <p class="description">${project.description}</p>
+                    </div>
+                </a>
+            `).join(' ')
+        }
+    `);
 }
 
 
@@ -51,6 +81,7 @@ $(document).ready(function() {
     }
 
     generateWaifuTop();
+    generateProjects();
 
     if (args === 'waifu' || args === '"waifu"' || document.URL.includes("#waifu")) $('.waifu.container').addClass('showed');
 

@@ -1,10 +1,76 @@
+.projects {
+    overflow: scroll;
+}
+
+.projects::-webkit-scrollbar {
+    display:none;
+}
+
 .projects.wrapper {
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 85%;
 
-    font-size: 4rem;
-    color: var(--grey);
+    padding: 3rem 5rem;
+    color: var(--white);
+
+    overflow: scroll;
+}
+
+.project {
+
+    display: flex;
+    align-items: flex-end;
+
+    margin: 1rem;
+    width: 23vw;
+    height: 15vw;
+
+    border-radius: 10px;
+
+    transition: 0.2s linear;
+
+}
+
+.project .infos {
+
+    padding: 2rem;
+
+    background: rgba(0,0,0,0);
+    width: 100%;
+
+    font-size: 2rem;
+    transition: 0.2s linear;
+
+}
+
+.project .description {
+
+    margin-top: 0rem;
+    height: 0;
+    opacity: 0;
+
+    font-size: 0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.1s linear;
+
+}
+
+.project:hover .infos {
+
+    background: rgba(0,0,0,0.6);
+}
+
+.project:hover .description {
+
+    height: 100%;
+    opacity: 1;
+    font-size: 1.2rem;
+}
+
+.project:hover {
+
+    width: 35vw;
 }

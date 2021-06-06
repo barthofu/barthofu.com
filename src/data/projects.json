@@ -1,0 +1,52 @@
+[
+
+    {
+        "name": "Nautiljon Scraper",
+        "description": "🍙 An unofficial scraping tool for https://nautiljon.com, a french anime and manga data website.",
+        "image": "https://cdn.discordapp.com/attachments/554783275915280404/851106254893219840/nautiljon-scraper.png",
+        "url": "https://github.com/barthofu/nautiljon-scraper"
+    },
+
+    {
+        "name": "Discord Bot Template",
+        "description": "🤖 A little discord.js v12 bot template that will satisfy all your needs!",
+        "image": "https://cdn.discordapp.com/attachments/554783275915280404/851109783171366922/discord-bot-template.png",
+        "url": "https://github.com/barthofu/discord-bot-template"
+    },
+
+    {
+        "name": "My Info Academia Website",
+        "description": "Site web pour la liste My Info Academia de l'IUT Informatique Lyon 1 Doua",
+        "image": "https://cdn.discordapp.com/attachments/554783275915280404/851108526231257089/mia-website.png",
+        "url": "https://myinfoacademia.eu"
+    },
+
+    {
+        "name": "StockBot",
+        "description": "📦 Bot Discord français de référençage de liens de téléchargement de contenu multimédia (anime/manga/films/séries/etc)",
+        "image": "https://cdn.discordapp.com/attachments/554783275915280404/851109781167013928/stockbot.png",
+        "url": "https://github.com/barthofu/discord-bot-template"
+    },
+
+    {
+        "name": "Github IDE Preview",
+        "description": "💻 Open a github repo in an online code editor with one click",
+        "image": "https://cdn.discordapp.com/attachments/554783275915280404/851112297119481907/github-ide-preview.png",
+        "url": "https://github.com/barthofu/github-ide-preview"
+    },
+
+    {
+        "name": "MEGA.nz Link Checker",
+        "description": "🔍 Little tool that checks if a mega.nz shared link is valid or not",
+        "image": "https://cdn.discordapp.com/attachments/554783275915280404/851112102647038022/mega-link-checker.png",
+        "url": "https://github.com/barthofu/mega-link-checker"
+    },
+
+    {
+        "name": "Manga Shop",
+        "description": "📚 HTML/CSS exercise for the IUT (S1)",
+        "image": "https://cdn.discordapp.com/attachments/554783275915280404/851112869785632824/manga-shop.png",
+        "url": "https://mangashop.barthofu.me"
+    }
+
+]
